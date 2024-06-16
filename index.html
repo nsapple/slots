@@ -8,13 +8,24 @@
 
 </head>
 <body>
+  <!-- Add popup menu -->
+  <div id="popup" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 10px; border: 1px solid #ddd; display: block; width: 1050px; height: 650px;">
+    <img src="Happy fathers day.png" alt="popup image" style="width: 1000px; height: 650px; object-fit: cover;">
+    <button id="close-popup" style="float: right; cursor: pointer;">X</button>
+  </div>
+
+  <script>
+    document.getElementById('close-popup').addEventListener('click', function() {
+      document.getElementById('popup').style.display = 'none';
+      document.querySelector('.slot-machine').style.display = 'block';
+    });
+  </script>
+
   <div style="position: absolute; top: 0; left: 0;">
     <button id="infoButton" class="info-button" onclick="alert('99% of gamblers quit before they win big so go spin that slot again!')">i</button>
   </div>
-<!-- partial:index.partial.html -->
-<!-- Step-by-step tutorial for this pen at https://youtu.be/boI2B4Gpp34 -->
 
-<div class="slot-machine">
+<div class="slot-machine" style="display: none;">
   <div class="slots">
     <div class="reel"></div>
     <div class="reel"></div>
